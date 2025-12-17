@@ -15,3 +15,11 @@ public class Book {
     public boolean isBig() { 
         return pages > 500;
     }
+
+    public boolean matches(String word) { 
+        if (word == null) { 
+            return false; 
+        } 
+        String wordLower = word.toLowerCase(); 
+        return title.toLowerCase().contains(wordLower) || author.toLowerCase().contains(wordLower); 
+    }
