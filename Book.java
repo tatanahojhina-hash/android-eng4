@@ -23,3 +23,8 @@ public class Book {
         String wordLower = word.toLowerCase(); 
         return title.toLowerCase().contains(wordLower) || author.toLowerCase().contains(wordLower); 
     }
+
+    public int estimatePrice() { 
+        int price = pages * 3; 
+        return price < 250 ? 250 : price; 
+    }
