@@ -11,3 +11,7 @@ public class Book {
         this.author = author; 
         this.pages = pages; 
     }
+
+    public boolean isBig() { 
+        return pages > 500;
+    }
