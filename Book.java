@@ -1,9 +1,9 @@
-// Book.java 
+
 public class Book { 
-    private String title; 
-    private int releaseYear; 
-    private String author; 
-    private int pages; 
+    private final String title; 
+    private final int releaseYear; 
+    private final String author; 
+    private final int pages; 
  
     public Book(String title, int releaseYear, String author, int pages) { 
         this.title = title; 
@@ -28,3 +28,14 @@ public class Book {
         int price = pages * 3; 
         return price < 250 ? 250 : price; 
     }
+
+    @Override 
+    public String toString() { 
+        return "Book{" + 
+                "title='" + title + '\'' + 
+                ", releaseYear=" + releaseYear + 
+                ", author='" + author + '\'' + 
+                ", pages=" + pages + 
+                '}'; 
+    } 
+}
